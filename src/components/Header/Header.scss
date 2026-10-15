@@ -1,0 +1,104 @@
+@use '../../styles/variables' as *;
+
+.header {
+  background: $color-bg;
+  border-bottom: 1px solid $color-border;
+
+  &__container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  &__top {
+    background: $color-primary;
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+    padding: 6px 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__logo img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  &__logo img:hover {
+    transform: scale(1.08);
+    filter: brightness(1.2) contrast(1.5);
+  }
+
+  &__search {
+    flex: 1;
+    display: flex;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    overflow: hidden;
+
+    input {
+      flex: 1;
+      border: 0;
+      padding: 10px 14px;
+      font-size: 13px;
+      outline: none;
+    }
+
+    button {
+      border: 0;
+      background: none;
+      padding: 0 14px;
+      cursor: pointer;
+      color: $color-text;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 16px;
+
+    button {
+      border: 0;
+      background: none;
+      cursor: pointer;
+      color: $color-text;
+      padding: 4px;
+    }
+  }
+
+  &__nav {
+    border-top: 1px solid $color-border;
+
+    ul {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      margin: 0 auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      justify-content: center;
+    }
+
+    a {
+      color: $color-text;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 500;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  gap: 24px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  max-width: 600px;
+
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: none;
+    border: 0;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  &__image { width: 200px; object-fit: contain; }
+  &__price { font-weight: 700; font-size: 20px; }
+  &__buy {
+    background: #f5c518;
+    border: 0;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+}

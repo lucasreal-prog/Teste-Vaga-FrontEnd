@@ -1,0 +1,94 @@
+@use '../../styles/variables' as *;
+
+.showcase {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 32px 16px;
+
+  &__title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: $color-primary;
+    margin: 0 0 16px;
+
+    &--lines {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      &::before,
+      &::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: $color-border;
+      }
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    border: 1px solid $color-border;
+    margin-bottom: 20px;
+  }
+
+  &__tab {
+    flex: 1;
+    padding: 12px 8px;
+    background: #fff;
+    border: 0;
+    border-right: 1px solid $color-border;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $color-text;
+    cursor: pointer;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    &--active {
+      color: $color-primary;
+      font-weight: 700;
+    }
+  }
+
+  &__carousel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__viewport {
+    flex: 1;
+    overflow: hidden;
+    padding: 8px 4px 16px;
+    margin: -8px -4px -16px;
+  }
+
+  &__track {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  &__arrow {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 0;
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+  }
+}

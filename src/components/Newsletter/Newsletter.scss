@@ -1,0 +1,65 @@
+@use '../../styles/variables' as *;
+
+.newsletter {
+  background: #1e1b4b;
+  color: #fff;
+
+  &__container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 32px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__text p {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  &__fields {
+    display: flex;
+    gap: 8px;
+
+    input {
+      padding: 10px 14px;
+      border: 0;
+      border-radius: 2px;
+      font-size: 12px;
+      min-width: 190px;
+    }
+
+    button {
+      background: $color-accent;
+      color: #1a1a1a;
+      border: 0;
+      border-radius: 2px;
+      padding: 10px 24px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #e0b200;
+      }
+    }
+  }
+
+  &__check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    font-size: 10px;
+  }
+}

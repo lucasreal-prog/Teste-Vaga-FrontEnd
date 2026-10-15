@@ -1,0 +1,78 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.40);
+  transition: 0.7s cubic-bezier(0.25, 1, 0.5, 1) 0.8s box-shadow(0.25, 1, 0.5, 1);
+  cursor: pointer;
+  
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+  }
+
+  &__image { 
+    width: 100%; 
+    object-fit: contain; 
+    }
+  &__name { 
+    font-size: 12px;
+    margin: 0; 
+}
+  &__price { 
+    font-size: 16px; 
+    font-weight: 700; 
+    margin: 0; 
+}
+    &__button {
+    background: #3b3fbf;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  
+  &__button:hover { 
+    background: #222450; 
+}
+ &__image:hover {
+    transform: scale(1.08);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  } 
+ &__old-price{
+    
+    font-size: 14px;
+    color: #888;
+    text-decoration: line-through;
+    font: poppins;
+    margin: 0;
+    line-height: 1.5;
+  }
+ &__price{
+    
+    font-size: 16px;
+    font-weight: 700;
+    color: #3b3fbf;
+    font-family: poppins;
+    margin: 0;
+    line-height: 1.2;
+  }
+  &__installment {
+  margin: 2px 0 0;  
+  line-height: 1.3;
+  color: #888;
+  font-size: 12px;
+}
+&__shipping {
+  margin: 2px 0 12px;
+  color:#3b3fbf;
+  line-height: 1.3;
+  font-size: 12px;
+}
+ }
+ 
